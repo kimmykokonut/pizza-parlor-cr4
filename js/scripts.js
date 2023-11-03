@@ -26,7 +26,7 @@ const sizePriceObject = {
 
 function handleFormSubmission(e) {
   e.preventDefault();
-  
+
   const nameInput = document.querySelector("input#nameInput").value;
   const userSizeRadioSelection = document.querySelector("input[name='size']:checked").value;
   const userToppingSelections = document.querySelectorAll("input[name=toppings]:checked");
@@ -50,9 +50,10 @@ function handleFormSubmission(e) {
   const newOrderCost = pizzaOrder.getTotalCost();
   h4NewOrderCost.append("Grand Total: " + "$" + newOrderCost);
   receiptDiv.append(h3Name, pSize, ulTopping, h4NewOrderCost);
-  }
+  receiptDiv.removeAttribute("class");
+}
 
 
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
   this.document.querySelector("form#orderForm").addEventListener("submit", handleFormSubmission);
 });
