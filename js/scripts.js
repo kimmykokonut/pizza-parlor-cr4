@@ -36,19 +36,22 @@ function handleFormSubmission(e) {
   h3Name.append("Name: " + nameInput);
   const pSize = document.createElement("p");
   pSize.append("Size: " + userSizeRadioSelection);
+
+  const ulTopping = document.createElement("ul");
   const userToppingsSelectArray = Array.from(userToppingSelections);
   userToppingsSelectArray.forEach(function (element) {
-    const pToppings = document.createElement("p");
-    pToppings.append(element.value);
-  
+    const liTopping = document.createElement("li");
+    liTopping.append(element.value);
+    ulTopping.append(liTopping);
+  });
   const pizzaOrder = new Pizza(userToppingsSelectArray, userSizeRadioSelection);
 
   const h4NewOrderCost = document.createElement("h4");
   const newOrderCost = pizzaOrder.getTotalCost();
   h4NewOrderCost.append("Grand Total: " + "$" + newOrderCost);
-  receiptDiv.append(h3Name, pSize, pToppings, h4NewOrderCost);
-  });
-}
+  receiptDiv.append(h3Name, pSize, ulTopping, h4NewOrderCost);
+  }
+
 
 window.addEventListener("load", function(){
   this.document.querySelector("form#orderForm").addEventListener("submit", handleFormSubmission);
