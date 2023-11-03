@@ -41,6 +41,9 @@ function handleFormSubmission(e) {
   // const userSizeSelectArray = Array.from(userSizeSelections);
   const userToppingsSelectArray = Array.from(userToppingSelections);
   const receiptDiv = document.querySelector("div#receipt");
+  const h3Name = document.createElement("h3");
+  h3Name.append(nameInput);
+  receiptDiv.append(h3Name);
   userToppingsSelectArray.forEach(function(element) {
     const paragraph = document.createElement("p");
     paragraph.append(element.value);
