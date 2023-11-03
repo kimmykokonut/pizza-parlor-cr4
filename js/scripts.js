@@ -3,26 +3,31 @@ function Pizza(toppings, size) {
   this.size = size;
 }
 
-Pizza.prototype.getToppingCost = function () {
-  let toppingCost;
-  const numToppings = this.toppings.length; 
-  toppingCost = numToppings * 2;
-  console.log(toppingCost);
-  return toppingCost; //6
-}
+// Pizza.prototype.getToppingCost = function () {
+//   let toppingCost;
+//   const numToppings = this.toppings.length; 
+//   toppingCost = numToppings * 2;
+//   console.log(toppingCost);
+//   return toppingCost;
+// }
 
-Pizza.prototype.getSizeCost = function() {
-  // let topTotal = Pizza.prototype.getToppingCost(); //return 6
+Pizza.prototype.getTotalCost = function() {
   let sizePrice;
   if (this.size === "personal") {
-    sizePrice = sizePriceObject.personal;
+    sizePrice = parseInt(sizePriceObject.personal);
   } else if (this.size === "medium") {
-    sizePrice = sizePriceObject.medium;
+    sizePrice = parseInt(sizePriceObject.medium);
   } else {
-    sizePrice = sizePriceObject.large;
+    sizePrice = parseInt(sizePriceObject.large);
   }
-return parseInt(sizePrice);
-};
+  let toppingCost;
+  const numToppings = this.toppings.length;
+  toppingCost = numToppings * 2;
+  console.log(toppingCost);
+  console.log(sizePrice);
+  console.log(sizePrice + toppingCost);
+  return (sizePrice + toppingCost);
+}
 
 const sizePriceObject = {
   personal: 15,
@@ -32,6 +37,6 @@ const sizePriceObject = {
 
 const myPizza = new Pizza(["mushrooms", "eggplant", "anchovies"], "personal");
 
-// add 2, return total price
-myPizza.getSizeCost(); //15
-myPizza.getToppingCost(); //6
+// myPizza.getSizeCost(); //15
+// myPizza.getToppingCost(); //6
+myPizza.getTotalCost(); //21

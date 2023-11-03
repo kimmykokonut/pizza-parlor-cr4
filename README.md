@@ -25,26 +25,22 @@ Describe Pizza.prototype.getSizeCost()
 Test: "It should calculate chosen pizza by size"
 Code: myPizza.getSizeCost();
 Expected Output: 15 (for personal size pizza)
----
+
 Describe Pizza.prototype.getToppingsCost()
 
 Test: "It should calculate chosen pizza by topping count"
 Code: myPizza.getToppingCost(); 
 Expected Output: 6 (for 3 toppings)
 
-<!-- Test: "It should return new pizza with size/price array as parameter"
-Code: Pizza.prototype.cost(sizeArray)
-Expected Output: 15 -->
+Describe Pizza.prototpe.getTotalCost()
 
-Test: "It should return new pizza with toppings/price array as parameter"
-Code: Pizza.prototype.cost(toppingsArray)
-Expected Output: 19
+Test: "It should return total price of pizza with toppings and size"
+Code: myPizza.getTotalCost()
+Expected Output: 21
 
-Test: "It should return totalPrice with toppings and size array as parameters"
-Code: Pizza.prototype.cost(sizeArray, toppingsArray)
-Exected Output: 19
 
-Describe PizzaRequest(Pizza, totalPrice) constructor function
+---------
+<!-- Describe PizzaRequest(Pizza, totalPrice) constructor function
 
 Test: "It should build a blueprint for pizza order and price"
 Code: PizzaRequest(myPizza, totalPrice)
@@ -57,4 +53,4 @@ Expected Output: {myPizza, "personal", ["mushrooms", "eggplant"], 19}
 Describe PizzaParlor() constructor function
 
 Test: "It should hold set pizza orders"
-Code: PizzaParlor(mushroomLover, totalPrice)
+Code: PizzaParlor(mushroomLover, totalPrice) -->
