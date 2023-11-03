@@ -3,21 +3,34 @@ function Pizza(toppings, size){
   this.size = size;
 }
 
+// let numberToppings = myPizza.toppings.length;
+
+// Pizza.prototype.getToppingCost = function () {
+//   const numToppings = Pizza.this.toppings.length 
+//   const toppingCost = numToppings * 2;
+//   console.log(toppingCost);
+//   return toppingCost; //6
+// }
+
+Pizza.prototype.calcCost = function () {
+  // let topTotal = Pizza.prototype.getToppingCost(); //return 6
+  let sizePrice;
+  if (this.size in sizePriceObject) {
+    sizePrice = sizePriceObject[this.size]
+  } else {
+    console.log("error");
+  }
+  return sizePrice; 
+};
+
+const sizePriceObject = {
+  personal: 15,
+  medium: 20,
+  large: 25,
+};
+
 const myPizza = new Pizza(["mushrooms", "eggplant", "anchovies"], "personal");
 
-let numberToppings = myPizza.toppings.length;
-
-function getToppingCost(numberToppings) {
-  let toppingCost = numberToppings * 2;
-  console.log(toppingCost);
-  return toppingCost;
-}
-
-
-// function toppingCount(myPizza) {
-
-//   const toppingKeys = Object.keys()
-//   let numberToppings = myPizza.toppings.length();
-//   console.log(numberToppings);
-//   return numberToppings;
-// }
+//get topping price
+// add 2, return total price
+Pizza.prototype.calcCost(myPizza);

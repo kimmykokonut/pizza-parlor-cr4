@@ -14,13 +14,13 @@ Test: "It should return a Pizza object with two properties for toppings and size
 Code: const myPizza = new Pizza(["mushrooms", "eggplant"], "personal");
 Expected Output: Pizza { toppings: ["mushrooms", "eggplant"], size: "personal" }
 
-Describe toppingCount()
+Describe getToppingCost()
 
-Test: "It should return number of toppings with toppingsArray"
-Code: toppingCount(myPizza.toppings)
-Expected Output: 2
-
-Describe Pizza.prototype.cost()
+Test: "It should return cost of toppings based on price $2 per topping with length of toppings array as input number"
+Code: getToppingCost(3)
+Expected Output: 6
+----
+Describe Pizza.prototype.calcCost()
 
 Test: "It should calculate chosen pizza by size"
 Code: Pizza.prototype.cost(myPizza)
