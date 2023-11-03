@@ -15,9 +15,6 @@ Pizza.prototype.getTotalCost = function () {
   let toppingCost;
   const numToppings = this.toppings.length;
   toppingCost = numToppings * 2;
-  console.log(toppingCost);
-  console.log(sizePrice);
-  console.log(sizePrice + toppingCost);
   return (sizePrice + toppingCost);
 }
 
@@ -27,33 +24,26 @@ const sizePriceObject = {
   large: 25,
 };
 
-// const myPizza = new Pizza(["mushrooms", "eggplant", "anchovies"], "personal");
-
-// myPizza.getSizeCost(); //15
-// myPizza.getToppingCost(); //6
-// myPizza.getTotalCost(); //21
-//ui- build html, event listener on submit, user input handle funct, etc.
 function handleFormSubmission(e) {
   e.preventDefault();
   const nameInput = document.querySelector("input#nameInput").value;
   const userSizeRadioSelection = document.querySelector("input[name='size']:checked").value;
   const userToppingSelections = document.querySelectorAll("input[name=toppings]:checked");
-  // const userSizeSelectArray = Array.from(userSizeSelections);
   const userToppingsSelectArray = Array.from(userToppingSelections);
   const receiptDiv = document.querySelector("div#receipt");
   const h3Name = document.createElement("h3");
   h3Name.append(nameInput);
-  receiptDiv.append(h3Name);
   userToppingsSelectArray.forEach(function(element) {
     const paragraph = document.createElement("p");
     paragraph.append(element.value);
-    receiptDiv.append(paragraph);
   const pToppings = document.createElement("p");
   pToppings.append(userSizeRadioSelection);
-  receiptDiv.append(pToppings);
+  const pizzaOrder = new Pizza(userToppingsSelectArray, userSizeRadioSelection);
+  const newOrder = pizzaOrder.getTotalCost();
+  receiptDiv.append(h3Name, paragraph, pToppings, newOrder);
   });
 }
 
 window.addEventListener("load", function(){
-  this.document.querySelector("form#survey").addEventListener("submit", handleFormSubmission);
+  this.document.querySelector("form#orderForm").addEventListener("submit", handleFormSubmission);
 });
