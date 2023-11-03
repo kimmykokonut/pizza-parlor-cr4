@@ -38,8 +38,17 @@ Test: "It should return total price of pizza with toppings and size"
 Code: myPizza.getTotalCost()
 Expected Output: 21
 
-
 ---------
+for safekeeping in case the totalCost fails
+// Pizza.prototype.getToppingCost = function () {
+//   let toppingCost;
+//   const numToppings = this.toppings.length; 
+//   toppingCost = numToppings * 2;
+//   console.log(toppingCost);
+//   return toppingCost;
+// }
+
+
 <!-- Describe PizzaRequest(Pizza, totalPrice) constructor function
 
 Test: "It should build a blueprint for pizza order and price"

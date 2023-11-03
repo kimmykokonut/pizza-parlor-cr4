@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>Pepe's Pizza Parlor</title>
+</head>
+
+<body>
+  <h1>Pepe's Pizza Parlor</h1>
+  <h2>Benvenuti a tutti!</h2>
+  <p>Please place your order below. NO substitutions!</p>
+  <div id="menu">
+    <h3>Menu</h3>
+    <h4>Size</h4>
+    <ul>
+      <li>$15 Personal (12")</li>
+      <li>$20 Medium (16")</li>
+      <li>$25 Large (18")</li>
+    </ul>
+    <h4>Toppings</h4>
+    <ul>
+      <li>$2 each</li>
+    </ul>
+  </div>
+  <form id="survey">
+    <p>Choose your size</p>
+    <label for="size"><input type="checkbox" name="size" value="personal">Personal</label>
+    <label for="size"><input type="checkbox" name="size" value="medium">Medium</label>
+    <label for="size"><input type="checkbox" name="size" value="large">Large</label>
+    <p>Choose your toppings</p>
+    <label for="toppings"><input type="checkbox" name="toppings" value="mushrooms">Mushrooms</label>
+    <label for="toppings"><input type="checkbox" name="toppings" value="eggplant">Eggplant</label>
+    <label for="toppings"><input type="checkbox" name="toppings" value="anchovies">Anchovies</label>
+    <br>
+    <button type="submit">Place Order</button>
+  </form>
+  <div class="hidden" id="receipt">
+    <p>Receipt goes here</p>
+  </div>
+</body>
+
+</html>

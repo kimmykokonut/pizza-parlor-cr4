@@ -3,14 +3,6 @@ function Pizza(toppings, size) {
   this.size = size;
 }
 
-// Pizza.prototype.getToppingCost = function () {
-//   let toppingCost;
-//   const numToppings = this.toppings.length; 
-//   toppingCost = numToppings * 2;
-//   console.log(toppingCost);
-//   return toppingCost;
-// }
-
 Pizza.prototype.getTotalCost = function () {
   let sizePrice;
   if (this.size === "personal") {
@@ -35,8 +27,9 @@ const sizePriceObject = {
   large: 25,
 };
 
-const myPizza = new Pizza(["mushrooms", "eggplant", "anchovies"], "personal");
+// const myPizza = new Pizza(["mushrooms", "eggplant", "anchovies"], "personal");
 
 // myPizza.getSizeCost(); //15
 // myPizza.getToppingCost(); //6
-myPizza.getTotalCost(); //21
+// myPizza.getTotalCost(); //21
+//ui- build html, event listener on submit, user input handle funct, etc.
