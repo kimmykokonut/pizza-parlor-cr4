@@ -36,16 +36,18 @@ const sizePriceObject = {
 function handleFormSubmission(e) {
   e.preventDefault();
   const nameInput = document.querySelector("input#nameInput").value;
-  const userSizeSelections = document.querySelectorAll("input[name=size]:checked");
+  const userSizeRadioSelection = document.querySelector("input[name='size']:checked").value;
   const userToppingSelections = document.querySelectorAll("input[name=toppings]:checked");
-  const userSizeSelectArray = Array.from(userSizeSelections);
+  // const userSizeSelectArray = Array.from(userSizeSelections);
   const userToppingsSelectArray = Array.from(userToppingSelections);
   const receiptDiv = document.querySelector("div#receipt");
-
   userToppingsSelectArray.forEach(function(element) {
     const paragraph = document.createElement("p");
     paragraph.append(element.value);
     receiptDiv.append(paragraph);
+  const pToppings = document.createElement("p");
+  pToppings.append(userSizeRadioSelection);
+  receiptDiv.append(pToppings);
   });
 }
 

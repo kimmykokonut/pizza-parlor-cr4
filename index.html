@@ -29,10 +29,12 @@
   <form id="survey">
     <label for="nameInput">Name: </label>
     <input type="text" id="nameInput" name="nameInput">
+
     <p>Choose your size</p>
-    <label for="size"><input type="checkbox" name="size" value="personal">Personal</label>
-    <label for="size"><input type="checkbox" name="size" value="medium">Medium</label>
-    <label for="size"><input type="checkbox" name="size" value="large">Large</label>
+    <input type="radio" name="size" value="personal" checked><label for="size">Personal</label><br />
+    <input type="radio" name="size" value="medium" checked><label for="size">Medium</label><br />
+    <input type="radio" name="size" value="large" checked><label for="size">Large</label><br />
+    <br>
     <p>Choose your toppings</p>
     <label for="toppings"><input type="checkbox" name="toppings" value="mushrooms">Mushrooms</label>
     <label for="toppings"><input type="checkbox" name="toppings" value="eggplant">Eggplant</label>
