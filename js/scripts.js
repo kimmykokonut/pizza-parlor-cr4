@@ -26,21 +26,27 @@ const sizePriceObject = {
 
 function handleFormSubmission(e) {
   e.preventDefault();
+  
   const nameInput = document.querySelector("input#nameInput").value;
   const userSizeRadioSelection = document.querySelector("input[name='size']:checked").value;
   const userToppingSelections = document.querySelectorAll("input[name=toppings]:checked");
-  const userToppingsSelectArray = Array.from(userToppingSelections);
+
   const receiptDiv = document.querySelector("div#receipt");
   const h3Name = document.createElement("h3");
-  h3Name.append(nameInput);
-  userToppingsSelectArray.forEach(function(element) {
-    const paragraph = document.createElement("p");
-    paragraph.append(element.value);
-  const pToppings = document.createElement("p");
-  pToppings.append(userSizeRadioSelection);
+  h3Name.append("Name: " + nameInput);
+  const pSize = document.createElement("p");
+  pSize.append("Size: " + userSizeRadioSelection);
+  const userToppingsSelectArray = Array.from(userToppingSelections);
+  userToppingsSelectArray.forEach(function (element) {
+    const pToppings = document.createElement("p");
+    pToppings.append(element.value);
+  
   const pizzaOrder = new Pizza(userToppingsSelectArray, userSizeRadioSelection);
-  const newOrder = pizzaOrder.getTotalCost();
-  receiptDiv.append(h3Name, paragraph, pToppings, newOrder);
+
+  const h4NewOrderCost = document.createElement("h4");
+  const newOrderCost = pizzaOrder.getTotalCost();
+  h4NewOrderCost.append("Grand Total: " + "$" + newOrderCost);
+  receiptDiv.append(h3Name, pSize, pToppings, h4NewOrderCost);
   });
 }
 
