@@ -11,7 +11,7 @@ function Pizza(toppings, size) {
 //   return toppingCost;
 // }
 
-Pizza.prototype.getTotalCost = function() {
+Pizza.prototype.getTotalCost = function () {
   let sizePrice;
   if (this.size === "personal") {
     sizePrice = parseInt(sizePriceObject.personal);
