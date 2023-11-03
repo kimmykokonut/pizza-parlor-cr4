@@ -20,15 +20,17 @@ Test: "It should return cost of toppings based on price $2 per topping with leng
 Code: getToppingCost(3)
 Expected Output: 6
 
-Describe Pizza.prototype.calcCost()
+Describe Pizza.prototype.getSizeCost()
 
 Test: "It should calculate chosen pizza by size"
-Code: myPizza.calcCost();
+Code: myPizza.getSizeCost();
 Expected Output: 15 (for personal size pizza)
 ---
-Test: "It should calculate chosen pizza by size and topping count"
-Code: myPizza.calcCost();
-Expected Output: 21 (for personal pizza + 3 toppings)
+Describe Pizza.prototype.getToppingsCost()
+
+Test: "It should calculate chosen pizza by topping count"
+Code: myPizza.getToppingCost(); 
+Expected Output: 6 (for 3 toppings)
 
 <!-- Test: "It should return new pizza with size/price array as parameter"
 Code: Pizza.prototype.cost(sizeArray)
