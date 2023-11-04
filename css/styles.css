@@ -10,20 +10,29 @@ body {
   background-image: url(../img/flag.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  width: fit-content;
 }
 
 #header {
   background-color: antiquewhite;
+  border: 2px solid black;
+  margin: 5px;
 }
 
 #menu {
   background-color: bisque;
+  border: 2px solid black;
+  margin: 5px;
 }
 
 #orderForm {
   background-color: blanchedalmond;
+  border: 2px solid black;
+  margin: 5px;
 }
 
 #receipt {
   background-color: antiquewhite;
+  border: 2px solid black;
+  margin: 5px;
 }

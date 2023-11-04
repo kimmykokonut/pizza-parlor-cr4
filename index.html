@@ -18,53 +18,55 @@
 
 <body>
   <div class="container">
-    <div id="header" class="text-center">
-      <h1>Pepe's Pizza Parlor</h1>
-      <h2>Benvenuti a tutti!</h2>
-      <p>Please place your order below. NO substitutions!</p>
-    </div>
-    <div id="menu">
-      <h3 class="text-center">Menu</h3>
-      <div class="flex-row">
-        <div class="col-md-6">
-          <h4>Size</h4>
-          <ul>
-            <li>$15 Personal (12")</li>
-            <li>$20 Medium (16")</li>
-            <li>$25 Large (18")</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <h4>Toppings</h4>
-          <ul>
-            <li>$2 each</li>
-          </ul>
+    <div class="column">
+      <div id="header" class="text-center">
+        <h1>Pepe's Pizza Parlor</h1>
+        <h2>Benvenuti a tutti!</h2>
+        <p>Please place your order below. NO substitutions!</p>
+      </div>
+      <div id="menu">
+        <h3 class="text-center">Pricing Options</h3>
+        <div class="row">
+          <div class="col-md">
+            <h4>Size</h4>
+            <ul>
+              <li>$15 Personal (12")</li>
+              <li>$20 Medium (16")</li>
+              <li>$25 Large (18")</li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <h4>Toppings</h4>
+            <ul>
+              <li>$2 each</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <form id="orderForm" class="text-center col-md-9">
-      <label for="nameInput">Name: </label>
-      <input type="text" id="nameInput" name="nameInput">
-      <br>
-      <p>Choose your size</p>
-      <input type="radio" name="size" value="personal" checked><label for="size">Personal</label><br />
-      <input type="radio" name="size" value="medium" checked><label for="size">Medium</label><br />
-      <input type="radio" name="size" value="large" checked><label for="size">Large</label><br />
-      <br>
-      <p>Choose your toppings</p>
-      <label for="toppings"><input type="checkbox" name="toppings" value="mushrooms">Mushrooms</label>
-      <label for="toppings"><input type="checkbox" name="toppings" value="eggplant">Eggplant</label>
-      <label for="toppings"><input type="checkbox" name="toppings" value="anchovies">Anchovies</label>
-      <label for="toppings"><input type="checkbox" name="toppings" value="ricotta">Ricotta Cheese</label>
-      <label for="toppings"><input type="checkbox" name="toppings" value="mamalils">Mama Lil's Peppers</label>
-      <label for="toppings"><input type="checkbox" name="toppings" value="anchovies">Anchovies</label>
-      <label for="toppings"><input type="checkbox" name="toppings" value="olives">Olives</label>
-      <label for="toppings"><input type="checkbox" name="toppings" value="pineapple">Pineapple</label>
-      <br>
-      <button type="submit" class="btn btn-danger">Place Order<i class="fas fa-thumbs-up"></i></button>
-    </form>
-    <div class="hidden" id="receipt">
-      <h3>Your Receipt</h3>
+      <form id="orderForm" class="text-center col-md-9">
+        <label for="nameInput">Name: </label>
+        <input type="text" id="nameInput" name="nameInput">
+        <br>
+        <p>Choose your size</p>
+        <input type="radio" name="size" value="personal" checked><label for="size">Personal</label><br />
+        <input type="radio" name="size" value="medium" checked><label for="size">Medium</label><br />
+        <input type="radio" name="size" value="large" checked><label for="size">Large</label><br />
+        <br>
+        <p>Choose your toppings</p>
+        <label for="toppings"><input type="checkbox" name="toppings" value="mushrooms">Mushrooms</label>
+        <label for="toppings"><input type="checkbox" name="toppings" value="eggplant">Eggplant</label>
+        <label for="toppings"><input type="checkbox" name="toppings" value="anchovies">Anchovies</label>
+        <label for="toppings"><input type="checkbox" name="toppings" value="ricotta">Ricotta Cheese</label>
+        <label for="toppings"><input type="checkbox" name="toppings" value="mamalils">Mama Lil's Peppers</label>
+        <label for="toppings"><input type="checkbox" name="toppings" value="anchovies">Anchovies</label>
+        <label for="toppings"><input type="checkbox" name="toppings" value="olives">Olives</label>
+        <label for="toppings"><input type="checkbox" name="toppings" value="pineapple">Pineapple</label>
+        <br>
+        <button type="submit" class="btn btn-danger">Place Order<i class="fas fa-thumbs-up"></i></button>
+      </form>
+      <div class="hidden text-center" id="receipt">
+        <h3>Your Receipt</h3>
+      </div>
     </div>
   </div>
 </body>
