@@ -1,11 +1,29 @@
 .hidden {
   display: none;
 }
+
 .container {
   font-family: 'Italiana', sans-serif;
 }
+
 body {
   background-image: url(../img/flag.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#header {
+  background-color: antiquewhite;
+}
+
+#menu {
+  background-color: bisque;
+}
+
+#orderForm {
+  background-color: blanchedalmond;
+}
+
+#receipt {
+  background-color: antiquewhite;
 }
