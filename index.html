@@ -16,17 +16,16 @@
 </head>
 
 <body>
-  <div class="container h-100">
-    <div class="column">
-      <div id="header" class="sticky-top justify-content-center">
+  <div class="container h-100 align-items-center">
+      <div id="header" class="text-center justify-content-center">
         <h1>Pepe's Pizza Parlor</h1>
         <h2>Benvenuti a tutti!</h2>
         <p>Please place your order below. NO substitutions!</p>
       </div>
-      <div id="menu" class="align-items-center justify-content-center">
+      <div id="menu" class="row justify-content-center">
         <h3>Pricing Options</h3>
         <div class="row">
-          <div class="col-md">
+          <div class="col-md-6">
             <h4>Size</h4>
             <ul>
               <li>$15 Personal (12")</li>
@@ -34,14 +33,14 @@
               <li>$25 Large (18")</li>
             </ul>
           </div>
-          <div class="col-md">
+          <div class="col-md-6">
             <h4>Toppings</h4>
             <ul>
               <li>$2 each</li>
             </ul>
           </div>
+          </div>
         </div>
-      </div>
       <div class="text-center jumbotron">
         <form id="orderForm">
           <label for="nameInput">Name: </label>
@@ -65,15 +64,15 @@
           <button type="submit" class="btn btn-danger">Place Order<i class="fa-solid fa-pizza-slice"></i></button>
         </form>
       </div>
+      </div>
       <div class="card text-center">
         <div class="card-header bg-black"></div>
-        <div class="card-body hidden align-items-center justify-content-center " id="receipt">
+        <div class="card-body hidden align-items-center" id="receipt">
           <h3>Your Receipt</h3>
         </div>
         <div class="card-header bg-black"></div>
       </div>
     </div>
-  </div>
 </body>
 
 </html>

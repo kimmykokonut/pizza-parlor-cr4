@@ -1,6 +1,7 @@
-function Pizza(toppings, size) {
+function Pizza(toppings, size, price) {
   this.toppings = toppings;
   this.size = size;
+  this.price = price;
 }
 
 Pizza.prototype.getTotalCost = function () {
@@ -15,7 +16,8 @@ Pizza.prototype.getTotalCost = function () {
   let toppingCost;
   const numToppings = this.toppings.length;
   toppingCost = numToppings * 2;
-  return (sizePrice + toppingCost);
+  this.price = sizePrice + toppingCost;
+  return (this.price);
 }
 
 const sizePriceObject = {
@@ -30,8 +32,8 @@ function handleFormSubmission(e) {
   const userSizeRadioSelection = document.querySelector("input[name='size']:checked").value;
   const userToppingSelections = document.querySelectorAll("input[name=toppings]:checked");
   const receiptDiv = document.querySelector("div#receipt");
-  const h3Name = document.createElement("h3");
-  h3Name.append("Name: " + nameInput);
+  const h4Name = document.createElement("h4");
+  h4Name.append("Name: " + nameInput);
   const pSize = document.createElement("p");
   pSize.append("Size: " + userSizeRadioSelection);
   const ulTopping = document.createElement("ul");
@@ -45,7 +47,7 @@ function handleFormSubmission(e) {
   const h4NewOrderCost = document.createElement("h4");
   const newOrderCost = pizzaOrder.getTotalCost();
   h4NewOrderCost.append("Grand Total: " + "$" + newOrderCost);
-  receiptDiv.append(h3Name, pSize, ulTopping, h4NewOrderCost);
+  receiptDiv.append(h4Name, pSize, ulTopping, h4NewOrderCost);
   receiptDiv.removeAttribute("class");
 }
 
