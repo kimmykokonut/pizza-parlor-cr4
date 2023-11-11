@@ -50,7 +50,6 @@ function handleFormSubmission(e) {
   receiptDiv.append(h4Name, pSize, ulTopping, h4NewOrderCost);
   receiptDiv.removeAttribute("class");
 }
-
 window.addEventListener("load", function () {
   this.document.querySelector("form#orderForm").addEventListener("submit", handleFormSubmission);
 });
